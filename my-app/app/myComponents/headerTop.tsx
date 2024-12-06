@@ -1,4 +1,3 @@
-
 import Link from 'next/link';
 import React from 'react';
 import { InputDemo } from './input';
@@ -37,34 +36,31 @@ const HeaderTop = () => {
       </div>
 
       {/* Header */}
-<header className="text-gray-600 body-font">
-  <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-    {/* Logo */}
-    <Link
-      href="/"
-      className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 md:mr-0 mr-auto"
-    >
-      <p className="font-bold text-2xl">Exclusive</p>
-    </Link>
+      <header className="text-gray-600 body-font">
+        <div className="container relative mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          {/* Logo */}
+          <Link
+            href="/"
+            className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 md:mr-0 mr-auto"
+          >
+            <p className="font-bold text-2xl">Exclusive</p>
+          </Link>
 
-    {/* Navigation Links */}
-    <nav className="hidden md:flex md:ml-auto md:mr-auto flex-wrap items-center text-base justify-center">
-      <Link href="/" className="mr-5 hover:text-gray-900">
-        Home
-      </Link>
-      <Link href="/about" className="mr-5 hover:text-gray-900">
-        About
-      </Link>
-      <Link href="/contact" className="mr-5 hover:text-gray-900">
-        Contact
-      </Link>
-      <Link href="/signup" className="mr-5 hover:text-gray-900">
-        Sign Up
-      </Link>
-    </nav>
-
-
-
+          {/* Navigation Links */}
+          <nav className="hidden md:flex md:ml-auto md:mr-auto flex-wrap items-center text-base justify-center">
+            <Link href="/" className="mr-5 hover:text-gray-900">
+              Home
+            </Link>
+            <Link href="/about" className="mr-5 hover:text-gray-900">
+              About
+            </Link>
+            <Link href="/contact" className="mr-5 hover:text-gray-900">
+              Contact
+            </Link>
+            <Link href="/signup" className="mr-5 hover:text-gray-900">
+              Sign Up
+            </Link>
+          </nav>
 
           {/* Search Bar */}
           <div className="relative hidden md:flex">
@@ -81,10 +77,13 @@ const HeaderTop = () => {
               <ShoppingCart />
             </Button>
           </div>
+
+          {/* Mobile Menu Button */}
+          <div className="absolute right-4 top-4">
+            <SheetDemo />
+          </div>
         </div>
       </header>
-
-      <SheetDemo/>
     </>
   );
 };

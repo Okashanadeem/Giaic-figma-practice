@@ -1,13 +1,19 @@
-import React from 'react';
-import { ChevronRight } from 'lucide-react';
-import Image from 'next/image';
-import img from '../../public/images/Frame 560.png';
-
-function OptionCarousel() {
-  return (
-    <div className="md:flex  md:flex-row items-start md:items-center">
-      {/* Menu Options */}
-      <div className="hidden  w-full md:w-auto pl-6 pr-6 md:pl-8 md:pr-12 border-b md:border-b-0 md:border-r border-gray-300">
+import { ChevronRight } from "lucide-react"
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+  } from "../../components/ui/accordion"
+  
+  export function AccordionDemo() {
+    return (
+      <Accordion type="single" collapsible className="w-full">
+        <AccordionItem value="item-1">
+          <AccordionTrigger className="md:hidden px-2 border-none">Category</AccordionTrigger>
+          <AccordionContent>
+            {/* Menu Options */}
+      <div className="w-full py-2 md:w-auto pl-6 pr-6 md:pl-8 md:pr-12 border-b md:border-b-0 md:border-r border-gray-300">
         <ul className="mt-6 space-y-3 ml-20">
           <li className="flex justify-between text-gray-700 hover:text-black ">
             <span className='mr-14'>Woman's Fashion</span>
@@ -26,18 +32,9 @@ function OptionCarousel() {
           <li className="text-gray-700 hover:text-black">Health & Beauty</li>
         </ul>
       </div>
-
-      {/* Carousel */}
-      <div className="w-full md:w-auto md:flex-1 m-7 pr-20">
-        <Image
-          src={img}
-          alt="Hero Image"
-          width={892}
-          height={344}
-        />
-      </div>
-    </div>
-  );
-}
-
-export default OptionCarousel;
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
+    )
+  }
+  

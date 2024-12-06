@@ -36,7 +36,7 @@ const HeaderTop = () => {
       </div>
 
       {/* Header */}
-      <header className="text-gray-600 body-font">
+      <header className="text-gray-600 body-font border-b-2">
         <div className="container relative mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           {/* Logo */}
           <Link

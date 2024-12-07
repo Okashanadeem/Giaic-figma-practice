@@ -30,18 +30,18 @@ const ProductSection: React.FC<ProductSectionProps> = ({
 }) => {
   return (
     <div className="space-y-6 mt-14 flex flex-col justify-center items-center md:items-start">
-      {/* Main Container with Flexbox for Section Header and Timer */}
-      <div className="gap-8 flex flex-wrap justify-center md:justify-start md:gap-[87px] w-full">
+      {/* Main Container with Flexbox for Section Header, Timer, and Arrows */}
+      <div className="flex flex-wrap items-center justify-between md:justify-start md:gap-[87px] w-full">
         {/* Section Header */}
         <SectionHeader heading={heading} subHeading={subHeading} />
 
         {/* Time Display (only if showTime is true) */}
         {showTime && <Time targetTime={3 * 24 * 60 * 60} />}
-      </div>
 
-      {/* Action Button */}
-      <div className="flex justify-center mt-6 md:mt-0 md:ml-[470px] w-full">
-        {action}
+        {/* Action (Arrow Buttons) */}
+        <div className="flex gap-2 md:ml-auto mr-[100px]">
+          {action}
+        </div>
       </div>
     </div>
   );

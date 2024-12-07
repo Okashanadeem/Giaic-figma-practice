@@ -7,10 +7,11 @@ function OptionCarousel() {
   return (
     <div className="md:flex  md:flex-row items-start md:items-center">
       {/* Menu Options */}
-      <div className="hidden  w-full md:w-auto pl-6 pr-6 md:pl-8 md:pr-12 border-b md:border-b-0 md:border-r border-gray-300">
+
+      <div className="hidden md:block w-full md:w-auto pl-6 pr-6 md:pl-8 md:pr-12 border-b md:border-b-0 md:border-r border-gray-300">
         <ul className="mt-6 space-y-3 ml-20">
-          <li className="flex justify-between text-gray-700 hover:text-black ">
-            <span className='mr-14'>Woman's Fashion</span>
+          <li className="flex justify-between text-gray-700 hover:text-black">
+            <span className="mr-14">Woman's Fashion</span>
             <ChevronRight className="w-5 h-5 text-gray-500" />
           </li>
           <li className="flex justify-between text-gray-700 hover:text-black">
@@ -26,6 +27,8 @@ function OptionCarousel() {
           <li className="text-gray-700 hover:text-black">Health & Beauty</li>
         </ul>
       </div>
+
+
 
       {/* Carousel */}
       <div className="w-full md:w-auto md:flex-1 m-7 pr-20">

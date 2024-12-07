@@ -24,20 +24,23 @@ const Time: React.FC<TimerProps> = ({targetTime }) => {
   const seconds = timeLeft % 60;
 
   return (
-    <div className="text-center space-y-4 pt-8">
+    <div className="text-center space-y-4 pt-8 ml-6">
       <div className="flex justify-center space-x-4">
         <div>
           <p className="text-sm">Days</p>
           <p className="text-3xl font-bold">{days}</p>
         </div>
+        <span className="text-[#E07575] text-xl w-[4px] h-[14px] py-4">:</span>
         <div>
           <p className="text-sm">Hours</p>
           <p className="text-3xl font-bold">{hours}</p>
         </div>
+        <span className="text-[#E07575] text-xl w-[4px] h-[14px] py-4">:</span>
         <div>
           <p className="text-sm">Minutes</p>
           <p className="text-3xl font-bold">{minutes}</p>
         </div>
+        <span className="text-[#E07575] text-xl w-[4px] h-[14px] py-4">:</span>
         <div>
           <p className="text-sm">Seconds</p>
           <p className="text-3xl font-bold">{seconds}</p>

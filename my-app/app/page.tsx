@@ -1,35 +1,31 @@
-import { ArrowLeft, ArrowRight } from "lucide-react";
 import OptionCarousel from "./myComponents/optionCarousel";
-import ProductSection from "./myComponents/productSection";
 import { AccordionDemo } from "./myComponents/CategoryAccordion";
+import Category from "./myComponents/category";
+import Listing2 from "./myComponents/listing2";
+import Listing1 from "./myComponents/listing1";
+import Image from "next/image";
+import Speakerimg from "../public/images/Frame 600.png"
 
 export default function Home() {
   return (
-    <div>
+    <div className="space-y-10">
       {/* Option Carousel */}
-      <AccordionDemo/>
+      <AccordionDemo />
       <OptionCarousel />
 
-      {/* Product Section */}
-      <ProductSection
-        heading="Flash Sales"
-        subHeading="Today's"
-        showTime={true} // Show the timer section
-        action={
-          <div className="flex gap-2 justify-center md:justify-start">
-            {/* Left Arrow Button */}
-            <button className="flex items-center justify-center bg-[#F5F5F5] rounded-full h-[46px] w-[46px] p-2 hover:bg-gray-200">
-              <ArrowLeft className="h-[24px] w-[24px]" />
-            </button>
-            {/* Right Arrow Button */}
-            <button className="flex items-center justify-center bg-[#F5F5F5] rounded-full h-[46px] w-[46px] p-2 hover:bg-gray-200">
-              <ArrowRight className="h-[24px] w-[24px]" />
-            </button>
-          </div>
-        }
-        product={[]} // Pass your product list or keep as an empty array for now
-        isCarousal={false} // Disable carousel behavior
-      />
+     <Listing1/>
+      <div className="flex justify-center">
+          <button className="w-[234px] h-[56px] bg-[#DB4444] text-white rounded">View All Products</button>
+      </div>
+
+      <hr className="w-full max-w-[1170px] mt-10 mb-10 mx-auto border-gray-300" />
+{/* Category  */}
+      <Category/>
+      <Listing2/>
+
+      <div className="m-24 h-auto">
+        <Image src={Speakerimg} alt="Speaker img"/>
+      </div>
     </div>
   );
 }
